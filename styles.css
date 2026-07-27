@@ -251,3 +251,39 @@ footer > p {
     font-size: 0.9rem;
     color: #E5C185;
 }
+
+/* ---------- Mobile Layout Improvements ---------- */
+
+section {
+    scroll-margin-top: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+main section {
+    border-bottom: 1px solid #E5C185;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+#offerings article:last-child {
+    margin-bottom: 0;
+}
+
+.gallery-grid figure {
+    margin: 0;
+}
+
+.gallery-link {
+    text-align: center;
+}
+
+footer .contact-info {
+    margin-bottom: 1rem;
+}
