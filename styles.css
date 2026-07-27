@@ -395,3 +395,40 @@ footer .contact-info {
     }
 
 }
+
+/* ---------- Final Polish ---------- */
+
+html {
+    scroll-padding-top: 1rem;
+}
+
+section {
+    scroll-margin-top: 2rem;
+}
+
+.gallery-grid img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+.gallery-grid figure {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#offerings article {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#offerings article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-link,
+header nav a {
+    transition: all 0.3s ease;
+}
