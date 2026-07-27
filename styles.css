@@ -107,3 +107,46 @@ main {
     max-width: 750px;
     margin: 0 auto;
 }
+
+/* ---------- Offerings Section ---------- */
+
+#offerings {
+    padding: 3rem 0;
+}
+
+#offerings h2 {
+    color: #1F2A44;
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#offerings article {
+    background-color: #F8F4EC;
+    border: 1px solid #E5C185;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#offerings h3 {
+    color: #76885B;
+    margin-bottom: 1rem;
+}
+
+#offerings p {
+    margin-bottom: 1rem;
+}
+
+#offerings ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+#offerings li {
+    margin-bottom: 0.5rem;
+}
+
+.monthly-basket {
+    background-color: #FFF8E8;
+}
