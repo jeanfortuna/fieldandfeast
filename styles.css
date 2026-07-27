@@ -1,4 +1,10 @@
-/* ---------- CSS Reset ---------- */
+/* CSS BY JEAN DE LA CRUZ */
+
+/* ---------- IMPORTED FONTS ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+/* ---------- CSS RESET ---------- */
 
 * {
     margin: 0;
@@ -6,16 +12,29 @@
     box-sizing: border-box;
 }
 
-/* ---------- Base Styles ---------- */
+/* ---------- ROOT VARIABLES ---------- */
+
+:root {
+    --navy: #1F2A44;
+    --green: #76885B;
+    --gold: #E5C185;
+    --cream: #F8F4EC;
+    --charcoal: #2B2B2B;
+    --off-white: #FAF9F6;
+    --light-gold: #FFF8E8;
+}
+
+/* ---------- GLOBAL STYLES (mobile first/small) ---------- */
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
 }
 
 body {
     font-family: "Playfair Display", serif;
-    background-color: #FAF9F6;
-    color: #2B2B2B;
+    background-color: var(--off-white);
+    color: var(--charcoal);
     line-height: 1.6;
 }
 
@@ -30,7 +49,7 @@ ul {
 }
 
 a {
-    color: #1F2A44;
+    color: var(--navy);
     text-decoration: none;
 }
 
@@ -38,11 +57,21 @@ a:hover {
     text-decoration: underline;
 }
 
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+section {
+    scroll-margin-top: 2rem;
+}
+
 /* ---------- Header ---------- */
 
 header {
-    background-color: #1F2A44;
-    color: #F8F4EC;
+    background-color: var(--navy);
+    color: var(--cream);
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -58,7 +87,7 @@ header h1 {
 }
 
 header > p {
-    color: #E5C185;
+    color: var(--gold);
     margin-bottom: 1.5rem;
 }
 
@@ -70,16 +99,16 @@ header nav ul {
 
 header nav a {
     display: block;
-    background-color: #76885B;
-    color: #FAF9F6;
+    background-color: var(--green);
+    color: var(--off-white);
     padding: 0.75rem 1rem;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 header nav a:hover {
-    background-color: #E5C185;
-    color: #1F2A44;
+    background-color: var(--gold);
+    color: var(--navy);
     text-decoration: none;
 }
 
@@ -90,6 +119,14 @@ main {
     margin: 0 auto;
 }
 
+main section {
+    border-bottom: 1px solid var(--gold);
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
 /* ---------- About Section ---------- */
 
 #about {
@@ -98,7 +135,7 @@ main {
 }
 
 #about h2 {
-    color: #1F2A44;
+    color: var(--navy);
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
@@ -115,22 +152,33 @@ main {
 }
 
 #offerings h2 {
-    color: #1F2A44;
+    color: var(--navy);
     font-size: 1.75rem;
     text-align: center;
     margin-bottom: 2rem;
 }
 
 #offerings article {
-    background-color: #F8F4EC;
-    border: 1px solid #E5C185;
+    background-color: var(--cream);
+    border: 1px solid var(--gold);
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+#offerings article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+#offerings article:last-child {
+    margin-bottom: 0;
 }
 
 #offerings h3 {
-    color: #76885B;
+    color: var(--green);
     margin-bottom: 1rem;
 }
 
@@ -148,7 +196,7 @@ main {
 }
 
 .monthly-basket {
-    background-color: #FFF8E8;
+    background-color: var(--light-gold);
 }
 
 /* ---------- Gallery Section ---------- */
@@ -158,7 +206,7 @@ main {
 }
 
 #gallery h2 {
-    color: #1F2A44;
+    color: var(--navy);
     font-size: 1.75rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -176,14 +224,21 @@ main {
 }
 
 .gallery-grid figure {
-    background-color: #F8F4EC;
-    border: 1px solid #E5C185;
+    margin: 0;
+    background-color: var(--cream);
+    border: 1px solid var(--gold);
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .gallery-grid img {
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
 }
 
 .gallery-grid figcaption {
@@ -195,29 +250,31 @@ main {
     display: block;
     width: fit-content;
     margin: 2rem auto 0;
-    background-color: #76885B;
-    color: #FAF9F6;
+    background-color: var(--green);
+    color: var(--off-white);
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
+    text-align: center;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .gallery-link:hover {
-    background-color: #1F2A44;
+    background-color: var(--navy);
 }
 
 /* ---------- Footer ---------- */
 
 footer {
-    background-color: #1F2A44;
-    color: #F8F4EC;
+    background-color: var(--navy);
+    color: var(--cream);
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 3rem;
 }
 
 footer h2 {
-    color: #E5C185;
+    color: var(--gold);
     margin-bottom: 1rem;
 }
 
@@ -230,8 +287,12 @@ footer address p {
     margin-bottom: 0.75rem;
 }
 
+footer .contact-info {
+    margin-bottom: 1rem;
+}
+
 footer a {
-    color: #F8F4EC;
+    color: var(--cream);
 }
 
 footer nav ul {
@@ -243,52 +304,16 @@ footer nav ul {
 }
 
 footer nav a:hover {
-    color: #E5C185;
+    color: var(--gold);
     text-decoration: none;
 }
 
 footer > p {
     font-size: 0.9rem;
-    color: #E5C185;
+    color: var(--gold);
 }
 
-/* ---------- Mobile Layout Improvements ---------- */
-
-section {
-    scroll-margin-top: 1rem;
-}
-
-h1,
-h2,
-h3 {
-    line-height: 1.2;
-}
-
-main section {
-    border-bottom: 1px solid #E5C185;
-}
-
-main section:last-child {
-    border-bottom: none;
-}
-
-#offerings article:last-child {
-    margin-bottom: 0;
-}
-
-.gallery-grid figure {
-    margin: 0;
-}
-
-.gallery-link {
-    text-align: center;
-}
-
-footer .contact-info {
-    margin-bottom: 1rem;
-}
-
-/* ---------- 600px Breakpoint ---------- */
+/* ---------- MEDIA QUERY (medium) ---------- */
 
 @media (min-width: 600px) {
 
@@ -325,7 +350,7 @@ footer .contact-info {
     }
 }
 
-/* ---------- 900px Breakpoint ---------- */
+/* ---------- MEDIA QUERY (large) ---------- */
 
 @media (min-width: 900px) {
 
@@ -351,10 +376,9 @@ footer .contact-info {
     footer nav ul {
         justify-content: center;
     }
-
 }
 
-/* ---------- 1200px Breakpoint ---------- */
+/* ---------- MEDIA QUERY (xl) ---------- */
 
 @media (min-width: 1200px) {
 
@@ -393,42 +417,4 @@ footer .contact-info {
     footer {
         padding: 4rem 2rem;
     }
-
-}
-
-/* ---------- Final Polish ---------- */
-
-html {
-    scroll-padding-top: 1rem;
-}
-
-section {
-    scroll-margin-top: 2rem;
-}
-
-.gallery-grid img {
-    transition: transform 0.3s ease;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.03);
-}
-
-.gallery-grid figure {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-#offerings article {
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-#offerings article:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.gallery-link,
-header nav a {
-    transition: all 0.3s ease;
 }
